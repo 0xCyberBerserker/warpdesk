@@ -37,7 +37,7 @@ body {
 }
 
 main {
-  width: min(1280px, calc(100vw - 48px));
+  width: min(1360px, calc(100vw - 48px));
   margin: 0 auto;
   padding: 28px 0 72px;
 }
@@ -50,15 +50,20 @@ main {
 }
 
 .hero-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(320px, 510px) minmax(420px, 1fr);
-  gap: 52px;
+  grid-template-columns: minmax(360px, 480px) minmax(460px, 640px);
+  justify-content: center;
+  gap: 64px;
   align-items: center;
 }
 
 .hero-copy {
   position: relative;
   z-index: 2;
+  max-width: 480px;
+  justify-self: end;
 }
 
 .lang-switch {
@@ -206,6 +211,8 @@ h2 {
   min-height: 560px;
   display: grid;
   place-items: center;
+  width: 100%;
+  justify-self: start;
 }
 
 .visual-halo {
@@ -260,6 +267,8 @@ h2 {
 }
 
 .signal-band {
+  width: min(1180px, 100%);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
@@ -280,6 +289,9 @@ h2 {
 }
 
 .detail-grid {
+  width: min(1180px, 100%);
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 44px;
@@ -312,6 +324,9 @@ h2 {
 }
 
 .footer-cta {
+  width: min(1180px, 100%);
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 24px;
@@ -336,6 +351,12 @@ code {
   .hero-shell {
     min-height: auto;
     padding-top: 12px;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    justify-self: stretch;
+    max-width: none;
   }
 
   .hero-visual {
