@@ -94,3 +94,7 @@ cd warpdesk
 ## Hoja de ruta
 
 La hoja de ruta vive como issues en GitHub para que el progreso sea visible y accionable.
+
+## Contribuciones
+
+Si quieres aportar una traducción para otro idioma, abre un pull request y estaré encantado de revisarlo e integrarlo si encaja bien en el proyecto. Lo mismo aplica a nuevas features, mejoras de UX, empaquetado o cualquier otra contribución útil.

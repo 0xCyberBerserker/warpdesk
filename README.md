@@ -100,3 +100,7 @@ cd warpdesk
 ## Roadmap
 
 Roadmap items live as GitHub issues so progress stays visible and actionable.
+
+## Contributions
+
+If you want to contribute a translation for another language, open a pull request and I will be happy to review it and merge it if it fits the project. The same applies to feature ideas, UX improvements, packaging work, or any other useful contribution.

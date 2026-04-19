@@ -94,3 +94,7 @@ cd warpdesk
 ## Full de ruta
 
 El full de ruta viu com a issues a GitHub perquè el progrés sigui visible i accionable.
+
+## Contribucions
+
+Si vols aportar una traducció per a un altre idioma, obre un pull request i estaré encantat de revisar-lo i integrar-lo si encaixa bé amb el projecte. El mateix aplica a noves funcionalitats, millores d'UX, empaquetat o qualsevol altra contribució útil.
