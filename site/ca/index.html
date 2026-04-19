@@ -5,56 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WarpDesk</title>
     <meta name="description" content="Interfície d'escriptori per a Cloudflare WARP a Linux." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <main class="page">
-      <header class="hero">
-        <div class="hero-copy">
-          <div class="lang-switch">
-            <a href="../">EN</a>
-            <a href="../es/">ES</a>
-            <a href="./" aria-current="page">CA</a>
+    <main>
+      <section class="hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="lang-switch">
+              <a href="../">EN</a>
+              <a href="../es/">ES</a>
+              <a href="./" aria-current="page">CA</a>
+            </div>
+            <div class="eyebrow">Superfície de control per a Linux</div>
+            <h1>WarpDesk</h1>
+            <p class="lede">
+              Un frontend natiu més net per a Cloudflare WARP a Linux, pensat per a qui vol controlar el servei, perfils i diagnòstic sense viure dins d'un terminal.
+            </p>
+            <p class="signature">Made with 🖤 in Barcelona City 🇪🇸</p>
+            <div class="actions">
+              <a href="https://github.com/0xCyberBerserker/warpdesk" class="button primary">Veure repositori</a>
+              <a href="https://github.com/0xCyberBerserker/warpdesk/releases/tag/v0.1.0" class="button">Descarregar v0.1.0</a>
+            </div>
+            <dl class="hero-meta">
+              <div>
+                <dt>Runtime</dt>
+                <dd>PySide6 + warp-cli</dd>
+              </div>
+              <div>
+                <dt>Idiomes</dt>
+                <dd>EN / ES / CA</dd>
+              </div>
+              <div>
+                <dt>Escriptori</dt>
+                <dd>Interfície Qt adaptada al tema</dd>
+              </div>
+            </dl>
           </div>
-          <div class="eyebrow">Aplicació d'escriptori per a Linux</div>
-          <h1>WarpDesk</h1>
-          <p class="lede">
-            Una interfície d'escriptori més amable per a Cloudflare WARP a Linux, pensada per a qui prefereix dos clics abans que comandes de terminal per a tasques rutinàries.
-          </p>
-          <p class="signature">Made with 🖤 in Barcelona City 🇪🇸</p>
-          <div class="actions">
-            <a href="https://github.com/0xCyberBerserker/warpdesk" class="button primary">Veure a GitHub</a>
-            <a href="https://github.com/0xCyberBerserker/warpdesk/issues" class="button">Full de ruta</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <img src="../warpdesk-main.png" alt="Captura de WarpDesk" />
-        </div>
-      </header>
 
-      <section class="grid">
-        <article class="card">
-          <h2>Per què existeix</h2>
+          <div class="hero-visual">
+            <div class="visual-halo"></div>
+            <div class="shot-frame">
+              <div class="shot-caption">
+                <span>Captura real</span>
+                <span>Feta amb la paleta de KDE Plasma</span>
+              </div>
+              <img src="../warpdesk-main.png" alt="Captura de WarpDesk" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-band">
+        <div class="signal-item">
+          <span class="signal-label">Control</span>
+          <p>Connecta, desconnecta, reinicia el servei i canvia el mode del túnel des d'una finestra d'escriptori real.</p>
+        </div>
+        <div class="signal-item">
+          <span class="signal-label">Context</span>
+          <p>Mantén visibles d'un cop d'ull el diagnòstic, el protocol actiu, els detalls del compte i les accions ràpides.</p>
+        </div>
+        <div class="signal-item">
+          <span class="signal-label">Flux</span>
+          <p>Desa perfils repetibles i mantén la interfície alineada amb el tema i l'idioma actius del sistema.</p>
+        </div>
+      </section>
+
+      <section class="detail-grid">
+        <div class="detail-block">
+          <div class="eyebrow">Per què existeix</div>
+          <h2>WARP a Linux funciona. L'experiència d'escriptori necessitava més disciplina.</h2>
           <p>
-            WARP a Linux funciona, però l'experiència continua sent massa orientada a consola per a una tasca petita del dia a dia. WarpDesk embolcalla el backend oficial en un flux més propi d'escriptori.
+            WarpDesk no intenta substituir el backend oficial. Embolica <code>warp-cli</code> i <code>warp-svc</code> dins d'una GUI més clara i operativa per a qui prefereix context visible abans que memoritzar comandes.
           </p>
-        </article>
-        <article class="card">
-          <h2>Què fa</h2>
-          <ul>
-            <li>Connectar i desconnectar</li>
-            <li>Canviar entre MASQUE i WireGuard</li>
-            <li>Canviar modes de WARP</li>
-            <li>Desar i aplicar perfils</li>
-            <li>Inspeccionar diagnòstics</li>
+        </div>
+
+        <div class="detail-block">
+          <div class="eyebrow">Què inclou avui</div>
+          <ul class="feature-list">
+            <li>Estat de connexió i control de protocol i mode</li>
+            <li>Desar, aplicar i esborrar perfils</li>
+            <li>Vista de diagnòstic i dreceres a la safata</li>
+            <li>Suport per a anglès, castellà i català</li>
+            <li>Estil Qt adaptat a la paleta de l'escriptori</li>
           </ul>
-        </article>
-        <article class="card">
-          <h2>Enfocament tècnic</h2>
+        </div>
+      </section>
+
+      <section class="footer-cta">
+        <div>
+          <div class="eyebrow">Projecte obert</div>
+          <h2>Públic, natiu i deliberadament petit.</h2>
           <p>
-            WarpDesk no substitueix el dimoni de WARP. Usa <code>warp-cli</code> i <code>warp-svc</code> com a backend i se centra a millorar l'ergonomia a Linux.
+            El full de ruta viu a GitHub Issues perquè l'empaquetat, el branding, les millores de backend i l'automatització de releases continuïn sent visibles.
           </p>
-        </article>
+        </div>
+        <div class="footer-actions">
+          <a href="https://github.com/0xCyberBerserker/warpdesk/issues" class="button primary">Obrir full de ruta</a>
+          <a href="https://0xcyberberserker.github.io/warpdesk/" class="button">English page</a>
+          <a href="https://0xcyberberserker.github.io/warpdesk/es/" class="button">Página en español</a>
+        </div>
       </section>
     </main>
   </body>
