@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WarpDesk</title>
+    <meta name="description" content="Desktop UI for Cloudflare WARP on Linux." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero-copy">
+          <div class="lang-switch">
+            <a href="./" aria-current="page">EN</a>
+            <a href="./es/">ES</a>
+            <a href="./ca/">CA</a>
+          </div>
+          <div class="eyebrow">Linux desktop app</div>
+          <h1>WarpDesk</h1>
+          <p class="lede">
+            A friendlier desktop UI for Cloudflare WARP on Linux, built for people who prefer two clicks over terminal commands for routine tasks.
+          </p>
+          <p class="signature">Made with 🖤 in Barcelona City 🇪🇸</p>
+          <div class="actions">
+            <a href="https://github.com/0xCyberBerserker/warpdesk" class="button primary">View on GitHub</a>
+            <a href="https://github.com/0xCyberBerserker/warpdesk/issues" class="button">Roadmap</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="./warpdesk-main.png" alt="WarpDesk screenshot" />
+        </div>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Why it exists</h2>
+          <p>
+            Linux WARP works, but the UX is still too shell-oriented for a small day-to-day task. WarpDesk wraps the official backend in a desktop-first workflow.
+          </p>
+        </article>
+        <article class="card">
+          <h2>What it does</h2>
+          <ul>
+            <li>Connect and disconnect</li>
+            <li>Switch MASQUE / WireGuard</li>
+            <li>Switch WARP modes</li>
+            <li>Save and apply profiles</li>
+            <li>Inspect diagnostics</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Technical stance</h2>
+          <p>
+            WarpDesk does not replace the WARP daemon. It uses <code>warp-cli</code> and <code>warp-svc</code> as the backend and focuses on better Linux desktop ergonomics.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+  </html>

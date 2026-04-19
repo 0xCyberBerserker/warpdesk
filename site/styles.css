@@ -1,0 +1,147 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1220;
+  --panel: #171b2e;
+  --panel-2: #1f2440;
+  --text: #eef1f7;
+  --muted: #a4aec4;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent-a: #4f46e5;
+  --accent-b: #7c3aed;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.28), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.24), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font: 16px/1.5 Inter, "Noto Sans", system-ui, sans-serif;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.lang-switch a {
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.lang-switch a[aria-current="page"] {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.eyebrow {
+  color: #bdbbff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 0.96;
+}
+
+.lede {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.signature {
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+  border: none;
+}
+
+.hero-art img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card p, .card li {
+  color: var(--muted);
+}
+
+code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

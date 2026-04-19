@@ -1,39 +1,51 @@
 # WarpDesk
 
-WarpDesk is a Qt desktop frontend for Cloudflare WARP on Linux.
+Desktop UI for Cloudflare WARP on Linux.
 
-This project was built for fun and for the community.
-
-The reason is simple: on Linux there was no native-feeling, friendly way to manage this without dropping to a terminal. WarpDesk exists for people who do not want to launch commands for a small day-to-day task and would rather manage WARP in two clicks from a proper desktop app.
+WarpDesk was built for fun and for the community. The idea is simple: there was no native-feeling, friendly Linux desktop experience for people who just want to manage WARP in two clicks without dropping to a terminal for a small everyday task.
 
 Made with 🖤 in Barcelona City 🇪🇸
 
-It uses `warp-cli` as the backend and adds:
+Languages:
 
-- a desktop window that is easier to use than the stock Linux client
-- tray actions
-- mode and protocol switching
-- persistent profiles
-- local menu / desktop integration
-- locale-aware UI for English, Spanish, and Catalan
+- [English](README.md)
+- [Español](README.es.md)
+- [Català](README.ca.md)
 
-## Status
+![WarpDesk screenshot](docs/media/warpdesk-main.png)
 
-Current scope:
+## Why
 
-- `connect` / `disconnect`
-- WARP mode switching
+The stock Linux WARP flow is functional, but not especially friendly if what you want is:
+
+- a proper desktop window
+- a tray entry with quick actions
+- a compact view of connection state
+- easy mode / protocol switching
+- saved profiles
+- no command memorization for routine usage
+
+WarpDesk keeps `warp-cli` as the backend and focuses on a better desktop UX on top.
+
+## Features
+
+- Connect / disconnect from a native Qt window
 - MASQUE / WireGuard switching
-- profile save/apply/delete
-- daemon state visibility
-- registration action
-- diagnostics panel
-- tray icon and menu
+- WARP mode switching
+- Saved profiles
+- Diagnostics panel
+- Tray icon with quick actions
+- Desktop integration for launcher and menu entry
+- Locale-aware UI for English, Spanish, and Catalan
+- Theme-aware palette so it fits better into Linux desktops
 
-Current backend constraint:
+## Screenshot
 
-- WarpDesk depends on `warp-cli` and `warp-svc`
-- if you uninstall `cloudflare-warp-bin`, WarpDesk loses its backend
+The screenshot above is generated from the app itself in offscreen mode and can be regenerated with:
+
+```bash
+QT_QPA_PLATFORM=offscreen PYTHONPATH=src python3 scripts/generate_screenshot.py
+```
 
 ## Requirements
 
@@ -58,13 +70,6 @@ pip install -e .
 warpdesk
 ```
 
-Without installing editable:
-
-```bash
-cd warpdesk
-PYTHONPATH=src python3 -m warpdesk
-```
-
 ## Install as desktop app
 
 This creates:
@@ -72,7 +77,7 @@ This creates:
 - `~/.local/bin/warpdesk`
 - `~/.local/share/applications/io.warpdesk.app.desktop`
 - `~/Escritorio/WarpDesk.desktop`
-- `~/.local/share/icons/hicolor/scalable/apps/warpdesk.svg`
+- `~/.local/share/icons/hicolor/scalable/apps/warpdesk-shield.svg`
 
 Run:
 
@@ -81,28 +86,17 @@ cd warpdesk
 ./scripts/install_local.sh
 ```
 
-## Repository layout
+## Public notes
 
-- `src/warpdesk/app.py`: Qt app bootstrap
-- `src/warpdesk/window.py`: main window and tray integration
-- `src/warpdesk/warp_cli.py`: `warp-cli` wrapper
-- `src/warpdesk/profile_store.py`: saved profiles
-- `src/warpdesk/i18n.py`: locale-aware strings
-- `src/warpdesk/theme.py`: palette-driven Plasma-like styling
-- `assets/`: launcher and tray icon assets
-- `scripts/install_local.sh`: local desktop installation
+- WarpDesk depends on `warp-cli` and `warp-svc`
+- uninstalling `cloudflare-warp-bin` removes the backend WarpDesk talks to
+- privileged service actions rely on `pkexec`
 
-## Docs
+## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md)
-- [Development](docs/DEVELOPMENT.md)
-- [Localization](docs/LOCALIZATION.md)
 - [Branding / Icons](docs/BRANDING.md)
 
-## Notes
+## Roadmap
 
-- Privileged service actions use `pkexec`
-- the app respects the system theme better by relying on `QPalette`
-- locale resolution prioritizes real system locales and ignores neutral `C` / `POSIX`
-- the custom WarpDesk shield icon is used for launcher / menu branding
-- Cloudflare state icons are still kept for connection-status signaling inside the app
+Roadmap items live as GitHub issues so progress stays visible and actionable.
