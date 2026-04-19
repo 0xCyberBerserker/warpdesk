@@ -6,6 +6,11 @@ WarpDesk nació por diversión y para la comunidad. La idea es simple: no había
 
 Made with 🖤 in Barcelona City 🇪🇸
 
+Estado:
+
+- mantenido por la comunidad
+- abierto a co-mantenedores, traductores, gente de packaging y contribuidores
+
 ![Captura de WarpDesk](docs/media/warpdesk-main.png)
 
 ## Por qué existe
@@ -98,3 +103,5 @@ La hoja de ruta vive como issues en GitHub para que el progreso sea visible y ac
 ## Contribuciones
 
 Si quieres aportar una traducción para otro idioma, abre un pull request y estaré encantado de revisarlo e integrarlo si encaja bien en el proyecto. Lo mismo aplica a nuevas features, mejoras de UX, empaquetado o cualquier otra contribución útil.
+
+Si este proyecto te resulta útil y quieres ayudar a mantenerlo vivo, también son bienvenidos nuevos mantenedores.

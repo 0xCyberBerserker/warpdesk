@@ -1,0 +1,36 @@
+# Maintainer: Community maintained <community@example.invalid>
+
+pkgname=warpdesk
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Qt desktop UI for Cloudflare WARP on Linux"
+arch=('any')
+url="https://github.com/0xCyberBerserker/warpdesk"
+license=('MIT')
+depends=('python' 'python-pyside6' 'cloudflare-warp-bin')
+makedepends=('python-build' 'python-installer' 'python-setuptools')
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  python -m installer --destdir="${pkgdir}" dist/*.whl
+
+  install -Dm644 assets/warpdesk-shield.svg \
+    "${pkgdir}/usr/share/icons/hicolor/scalable/apps/warpdesk-shield.svg"
+
+  install -Dm644 packaging/aur/io.warpdesk.app.desktop \
+    "${pkgdir}/usr/share/applications/io.warpdesk.app.desktop"
+
+  install -Dm755 packaging/aur/warpdesk-launch \
+    "${pkgdir}/usr/bin/warpdesk"
+
+  install -Dm644 LICENSE \
+    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

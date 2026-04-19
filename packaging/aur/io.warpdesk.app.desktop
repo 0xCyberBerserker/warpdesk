@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WarpDesk
+Comment=Desktop client for Cloudflare WARP on Linux
+Exec=warpdesk
+Icon=warpdesk-shield
+Terminal=false
+Categories=Network;Security;Utility;
+StartupNotify=true
+StartupWMClass=WarpDesk
+X-GNOME-UsesNotifications=true

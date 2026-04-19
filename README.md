@@ -6,6 +6,11 @@ WarpDesk was built for fun and for the community. The idea is simple: there was 
 
 Made with 🖤 in Barcelona City 🇪🇸
 
+Status:
+
+- community-maintained
+- open to co-maintainers, translators, packagers, and contributors
+
 Languages:
 
 - [English](README.md)
@@ -104,3 +109,5 @@ Roadmap items live as GitHub issues so progress stays visible and actionable.
 ## Contributions
 
 If you want to contribute a translation for another language, open a pull request and I will be happy to review it and merge it if it fits the project. The same applies to feature ideas, UX improvements, packaging work, or any other useful contribution.
+
+If this project becomes useful to you and you want to help keep it alive, maintainers are welcome too.
